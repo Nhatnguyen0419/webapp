@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using eShopSolution.Data.Configuration;
 using eShopSolution.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ namespace eShopSolution.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration)
             base.OnModelCreating(modelBuilder);
         }
 
