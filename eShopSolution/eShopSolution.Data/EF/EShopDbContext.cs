@@ -17,7 +17,7 @@ namespace eShopSolution.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AppConfigConfiguration)
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             base.OnModelCreating(modelBuilder);
         }
 
