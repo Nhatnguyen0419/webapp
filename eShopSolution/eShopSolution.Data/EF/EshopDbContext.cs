@@ -1,10 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using eShopSolution.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace eShopSolution.Data.EF
 {
-    class EshopDbContext
+    public class EShopDbContext : DbContext
     {
+      
+        public EShopDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
+        public DbSet<Product> Produdts { set; get; }
+        public DbSet<Category> Categories { set; get; }
+
+        public  DbSet<AppConfig> AppConfigs { set; get; }
+
+
+        public DbSet<Cart> Carts { get; set; }
+
+        public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
+        public DbSet<ProductInCategory> ProductInCategories { get; set; }
+
+        public DbSet<Contact> Contacts { get; set; }
+
+        public DbSet<Language> Languages { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ProductTranslation> ProductTranslations { get; set; }
+
+        public DbSet<Promotion> Promotions { get; set; }
+
+
+        public DbSet<Transaction> Transactions { get; set; }
+
     }
 }

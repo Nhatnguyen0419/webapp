@@ -4,7 +4,9 @@ using System.Text;
 
 namespace eShopSolution.Data.Enum
 {
-    class Status
+    public enum Status
     {
+        InActive,
+        Active
     }
 }
