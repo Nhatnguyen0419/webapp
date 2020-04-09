@@ -9,7 +9,7 @@ namespace eShopSolution.Data.EF
 {
     public class EShopDbContext : DbContext
     {
-      
+
         public EShopDbContext(DbContextOptions options) : base(options)
         {
             //
@@ -23,13 +23,14 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             //base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Product> Produdts { set; get; }
-        public DbSet<Category> Categories { set; get; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-        public  DbSet<AppConfig> AppConfigs { set; get; }
+        public DbSet<AppConfig> AppConfigs { get; set; }
 
 
         public DbSet<Cart> Carts { get; set; }

@@ -15,7 +15,9 @@ namespace eShopSolution.Data.Configuration
 
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.ShipEmail).IsRequired().IsUnicode(false).HasMaxLength(50);
+            builder.Property(x => x.ShipEmail)
+                .IsRequired().IsUnicode(false)
+                .HasMaxLength(50);
 
         }
     }
