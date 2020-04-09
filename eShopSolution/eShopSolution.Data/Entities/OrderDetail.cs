@@ -12,8 +12,7 @@ namespace eShopSolution.Data.Entities
         public decimal Price { set; get; }
 
         public Order Order { get; set; }
-
-        public Product Product { get; set; }
-
+        public  Product Product { get; set; }
+       
     }
 }
