@@ -14,6 +14,7 @@ namespace eShopSolution.Data.Configuration
             builder.ToTable("Languages");
 
             builder.HasKey(x => x.Id);
+
             builder.Property(x => x.Id)
                 .IsRequired()
                 .IsUnicode(false)
