@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using eShopSolution.Data.Configuration;
 using eShopSolution.Data.Entities;
+using eShopSolution.Data.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace eShopSolution.Data.EF
@@ -17,6 +18,8 @@ namespace eShopSolution.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Configure using Fluent API
+
             modelBuilder.ApplyConfiguration(new CartConfiguration());
 
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
@@ -33,6 +36,9 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
 
+            //Data seeding
+
+           modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
 
