@@ -9,7 +9,7 @@ namespace eShopSolution.Data.Entities
     {
         public int Id { set; get; }
         public int SortOrder { set; get; }
-        public int IsShowOnHome { set; get; }
+        public bool IsShowOnHome { get; set; }
         public int? ParentId { set; get; }
         public Status Status { set; get; }
 
