@@ -37,6 +37,10 @@ namespace eShopSolution.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(200);
 
+            builder.HasOne(x => x.AppUser)
+                .WithMany(x =>x.Orders )
+                .HasForeignKey(x => x.UserId);
+
 
         }
     }
