@@ -4,6 +4,7 @@ using System.Text;
 
 namespace eShopSolution.Application.Dtos
 {
+    //resonse
     public class PagingRequestBase
     {
         public  int PageIndex { get; set; }

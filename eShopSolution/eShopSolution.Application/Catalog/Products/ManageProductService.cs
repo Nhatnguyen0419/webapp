@@ -29,29 +29,38 @@ namespace eShopSolution.Application.Catalog.Products
 
         public async Task<int> Create(ProductCreateRequest request)
         {
-            var product = new Product()
+            try
             {
-                Price = request.Price,
-                OriginalPrice = request.OrginalPrice,
-                Stock = request.Stock,
-                ViewCount = 0,
-                DateCreated = DateTime.Now,
-                ProductTranslations = new List<ProductTranslation>()
+                var product = new Product()
                 {
-                    new ProductTranslation()
+                    Price = request.Price,
+                    OriginalPrice = request.OrginalPrice,
+                    Stock = request.Stock,
+                    ViewCount = 0,
+                    DateCreated = DateTime.Now,
+                    ProductTranslations = new List<ProductTranslation>()
                     {
-                        Name =  request.Name,
-                        Description = request.Description,
-                        Details = request.Details,
-                        SeoDescription = request.SeoDescription,
-                        SeoAlias = request.SeoAlias,
-                        SeoTitle = request.SeoTitle,
-                        LanguageId = request.LanguageId
+                        new ProductTranslation()
+                        {
+                            Name =  request.Name,
+                            Description = request.Description,
+                            Details = request.Details,
+                            SeoDescription = request.SeoDescription,
+                            SeoAlias = request.SeoAlias,
+                            SeoTitle = request.SeoTitle,
+                            LanguageId = request.LanguageId
+                        }
                     }
-                }
-            };
-            _context.Products.Add(product);
-            return await _context.SaveChangesAsync();
+                };
+                _context.Products.Add(product);
+                return await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                // todo 
+
+            }
+            
         }
 
         public async Task<int> Delete(int productId)
