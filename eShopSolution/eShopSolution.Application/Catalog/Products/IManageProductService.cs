@@ -6,6 +6,9 @@ using eShopSolution.Application.Dtos;
 
 namespace eShopSolution.Application.Catalog.Products
 {
+    // SOLID : Dependence
+    // Instance : HS a = new HS();
+
     public interface IManageProductService
     {
         Task<int> Create(ProductCreateRequest request);
@@ -15,7 +18,7 @@ namespace eShopSolution.Application.Catalog.Products
         Task<bool> UpdatePrice(int ProductId, decimal newPrice);
         Task<bool> UpdateStock(int productId, int addedQuantity);
         Task AddViewCount(int productId);
-        Task<List<ProductViewModel>> GetAll();
+      
         Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
 
     }
