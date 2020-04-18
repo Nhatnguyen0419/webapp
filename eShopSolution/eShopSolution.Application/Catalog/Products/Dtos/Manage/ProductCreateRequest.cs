@@ -18,6 +18,8 @@ namespace eShopSolution.Application.Catalog.Products.Dtos.Manage
         public string SeoAlias { set; get; }
         public string LanguageId { set; get; }
 
+        //public  IFormFile 
+
 
     }
 }
