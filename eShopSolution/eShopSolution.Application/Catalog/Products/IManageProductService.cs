@@ -15,11 +15,11 @@ namespace eShopSolution.Application.Catalog.Products
         Task Update(ProductUpdateRequest request);
         Task<int> Delete(int productId);
 
-        Task<bool> UpdatePrice(int ProductId, decimal newPrice);
+        Task<bool> UpdatePrice(int productId, decimal newPrice);
         Task<bool> UpdateStock(int productId, int addedQuantity);
         Task AddViewCount(int productId);
-      
-        Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
+     
+      Task<PageResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
 
     }
 }
