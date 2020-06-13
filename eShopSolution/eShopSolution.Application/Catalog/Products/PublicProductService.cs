@@ -1,6 +1,4 @@
-﻿using eShopSolution.Application.Catalog.Products.Dtos;
-using eShopSolution.Application.Catalog.Products.Dtos.Public;
-using eShopSolution.Application.Dtos;
+﻿
 using eShopSolution.Data.EF;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using eShopSolution.ViewModels.Catalog.Common;
+using eShopSolution.ViewModels.Catalog.Products;
+using eShopSolution.ViewModels.Catalog.Products.Public;
 
 namespace eShopSolution.Application.Catalog.Products
 {
@@ -46,7 +47,7 @@ namespace eShopSolution.Application.Catalog.Products
             return data;
         }
 
-        public async Task<PageResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request)
+        public async Task<PageResult<ProductViewModel>> GetAllByCategoryId(ViewModels.Catalog.Products.Public.GetProductPagingRequest request)
         {
             //1. Select join
             var query = from p in _context.Products
@@ -88,6 +89,11 @@ namespace eShopSolution.Application.Catalog.Products
                 Items = data
             };
             return pagedResult;
+        }
+
+        public Task<PageResult<ProductViewModel>> GetAllByCategoryId(ViewModels.Catalog.Products.Manage.GetProductPagingRequest request)
+        {
+            throw new NotImplementedException();
         }
     }
 
