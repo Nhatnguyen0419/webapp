@@ -4,6 +4,7 @@ using eShopSolution.ViewModels.Catalog.Common;
 using eShopSolution.ViewModels.Catalog.Products;
 using eShopSolution.ViewModels.Catalog.Products.Manage;
 
+
 namespace eShopSolution.Application.Catalog.Products
 {
     // SOLID : Dependence
