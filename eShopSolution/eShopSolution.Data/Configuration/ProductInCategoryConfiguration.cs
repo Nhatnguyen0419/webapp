@@ -15,7 +15,7 @@ namespace eShopSolution.Data.Configuration
 
             builder.HasKey(t => new { t.CategoryId, t.ProductId });
 
-            builder.ToTable(" ProductInCategories");
+            builder.ToTable("ProductInCategories");
 
             builder
                 .HasOne(t => t.Product)

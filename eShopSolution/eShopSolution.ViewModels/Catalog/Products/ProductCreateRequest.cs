@@ -1,7 +1,7 @@
 ﻿using System.Dynamic;
 using Microsoft.AspNetCore.Http;
 
-namespace eShopSolution.ViewModels.Catalog.Products.Manage
+namespace eShopSolution.ViewModels.Catalog.Products
 {
     public class ProductCreateRequest
     {
