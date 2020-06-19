@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using eShopSolution.Data.Configuration;
 using eShopSolution.Data.Entities;
 using eShopSolution.Data.Extensions;
