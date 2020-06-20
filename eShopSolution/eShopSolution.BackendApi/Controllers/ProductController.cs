@@ -22,14 +22,14 @@ namespace eShopSolution.BackendApi.Controllers
         }
 
         //http://localhost:port/product
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpGet("{languageId}")]
+        public async Task<IActionResult> Get( string languageId)
         {
-            var products = await _publicProductService.GetAll();
+            var products = await _publicProductService.GetAll(languageId);
             return Ok(products);
         }
         //http://localhost:port/product/public-paging
-        [HttpGet("public-paging")]
+        [HttpGet("public-paging/{languageId}")]
         public async Task<IActionResult> Get([FromQuery] GetPublicProductPagingRequest request)
         {
             var products = await _publicProductService.GetAllByCategoryId(request);

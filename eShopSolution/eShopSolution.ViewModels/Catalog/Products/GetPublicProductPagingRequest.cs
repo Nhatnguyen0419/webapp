@@ -1,9 +1,11 @@
-﻿using eShopSolution.ViewModels.Catalog.Common;
+﻿using System.Security.Principal;
+using eShopSolution.ViewModels.Catalog.Common;
 
 namespace eShopSolution.ViewModels.Catalog.Products
 {
-    public class GetPublicProductPagingRequest:PagingRequestBase
+    public class GetPublicProductPagingRequest : PagingRequestBase
     {
-        public  int? CategoryId { get; set; }
+        public string LanguageId { get; set; }
+        public int? CategoryId { get; set; }
     }
 }
