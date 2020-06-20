@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using eShopSolution.Application.Common;
 using Microsoft.AspNetCore.Hosting;
 
-namespace eShopSolution.Application.Commom
+namespace eShopSolution.Application.Common
 {
     public class FileStorageService : IStorageService
     {
