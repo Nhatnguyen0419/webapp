@@ -33,6 +33,7 @@ namespace eShopSolution.BackendApi
             services.AddTransient<IManageProductService,ManageProductService>();
             services.AddTransient<IStorageService,FileStorageService>();
             services.AddControllersWithViews();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1",new OpenApiInfo{ Title ="Swagger eShopSolution,", Version="v1"});
