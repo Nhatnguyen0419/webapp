@@ -67,7 +67,8 @@ namespace eShopSolution.Application.System.Users
                 Email = request.Email,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                PhoneNumber = request.PhoneNumber
+                PhoneNumber = request.PhoneNumber,
+                UserName = request.UserName,
 
             };
             var result = await _userManager.CreateAsync(user, request.Password);
@@ -78,6 +79,7 @@ namespace eShopSolution.Application.System.Users
 
             return false;
         }
+
 
     }
 }
