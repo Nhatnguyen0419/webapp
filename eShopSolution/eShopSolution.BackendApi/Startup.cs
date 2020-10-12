@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Reflection;
 using eShopSolution.Application.Catalog.Products;
 using eShopSolution.Application.Common;
 using eShopSolution.Application.System.Users;
@@ -20,6 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+
 
 namespace eShopSolution.BackendApi
 {
@@ -41,7 +40,7 @@ namespace eShopSolution.BackendApi
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<EShopDbContext>()
                 .AddDefaultTokenProviders();
-            //Declare DI
+            //Declare DI Register Service
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManageProductService, ManageProductService>();
             services.AddTransient<IStorageService, FileStorageService>();

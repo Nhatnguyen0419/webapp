@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using eShopSolution.AdminApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using eShopSolution.AdminApp.Models;
 
 namespace eShopSolution.AdminApp.Controllers
 {
+    //[Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -20,6 +22,7 @@ namespace eShopSolution.AdminApp.Controllers
 
         public IActionResult Index()
         {
+            var user = User.Identity.Name;
             return View();
         }
 

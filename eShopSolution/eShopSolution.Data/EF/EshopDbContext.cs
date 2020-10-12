@@ -32,6 +32,7 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
+
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());

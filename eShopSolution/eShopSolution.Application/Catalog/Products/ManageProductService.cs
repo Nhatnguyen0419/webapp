@@ -85,7 +85,7 @@ namespace eShopSolution.Application.Catalog.Products
         {
             var product = await _context.Products.FindAsync(productId);
 
-            if (product == null) throw new EShopException("Cannot find a product:{productId}");
+            if (product == null) throw new EShopException($"Cannot find a product:{productId}");
 
 
             var images = _context.ProductImages.Where(i => i.ProductId == productId);
@@ -228,6 +228,7 @@ namespace eShopSolution.Application.Catalog.Products
                     thumbnailImage.ImagePath = await this.SaveFile(request.ThumbnailImage);
                     _context.ProductImages.Update(thumbnailImage);
                 }
+               
             }
             return await _context.SaveChangesAsync();
         }
@@ -256,10 +257,12 @@ namespace eShopSolution.Application.Catalog.Products
         {
             //var product = await _context.Products.FindAsync(productId);
             //product.
+
             var product = await _context.Products.FindAsync(productId);
             if (product == null) throw new EShopException($"Cannot find a product with id: {productId}");
             product.Stock += addedQuantity;
             return await _context.SaveChangesAsync() > 0;
+
         }
 
         private async Task<string> SaveFile(IFormFile file)

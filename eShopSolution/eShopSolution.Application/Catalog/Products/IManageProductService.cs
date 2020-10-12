@@ -3,8 +3,6 @@ using System.Threading.Tasks;
 using eShopSolution.Application.Catalog.ProductImages;
 using eShopSolution.ViewModels.Catalog.Common;
 using eShopSolution.ViewModels.Catalog.Products;
-using Microsoft.AspNetCore.Http;
-using ProductImageViewModel = eShopSolution.Application.Catalog.ProductImages.ProductImageViewModel;
 
 
 namespace eShopSolution.Application.Catalog.Products
