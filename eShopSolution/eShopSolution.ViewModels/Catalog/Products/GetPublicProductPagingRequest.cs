@@ -1,5 +1,5 @@
-﻿using System.Security.Principal;
-using eShopSolution.ViewModels.Catalog.Common;
+﻿using eShopSolution.ViewModels.Common;
+using System.Security.Principal;
 
 namespace eShopSolution.ViewModels.Catalog.Products
 {

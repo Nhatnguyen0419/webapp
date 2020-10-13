@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using eShopSolution.ViewModels.Catalog.Common;
+﻿using eShopSolution.ViewModels.Common;
+using System.Collections.Generic;
 
 namespace eShopSolution.ViewModels.Catalog.Products
 {

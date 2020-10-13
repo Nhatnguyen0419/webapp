@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace eShopSolution.Application.Catalog.ProductImages
+namespace eShopSolution.ViewModels.Catalog.ProductImages
 {
     public class ProductImageViewModel
     {

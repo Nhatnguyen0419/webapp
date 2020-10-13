@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace eShopSolution.ViewModels.Catalog.Common
+namespace eShopSolution.ViewModels.Common
 {
-    public class PageResult<T>
+    public class PagedResult<T>
     {
 
         //commit
