@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using eShopSolution.Data.Configuration;
 using eShopSolution.Data.Entities;
 using eShopSolution.Data.Extensions;
@@ -34,6 +32,7 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
+
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
@@ -80,6 +79,6 @@ namespace eShopSolution.Data.EF
 
 
         public DbSet<Transaction> Transactions { get; set; }
-
+        public DbSet<ProductImage> ProductImages { get; set; }
     }
 }
